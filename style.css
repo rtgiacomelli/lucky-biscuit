@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+  
+  font-size: 1.6rem;
+  
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  background: #FFFFFF;
+  box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+  
+  width: min(42.4rem, 90%);
+
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  margin-top: 1.4rem;
+  margin-bottom: 2.0rem;
+}
+
+#btnOpen {
+  border: none;
+  background: none;
+}
+
+.entireBiscuit:hover {
+  animation: tilt-n-move-shaking 0.25s ease-out infinite;
+  cursor: pointer;
+}
+
+.luckyMessage {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-size: 2.4rem;
+
+  background: #E4EDF1;
+  padding: 1.0rem;
+  box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.5);
+
+  margin-top: 1.7rem;
+  margin-bottom: 6rem;
+
+  bottom: 0;
+  opacity: 0;
+  animation: slideAndGrow 1.5s ease-in-out forwards;
+}
+
+.crackedBiscuit {
+  margin-bottom: 6.0rem;
+}
+
+#btnReset {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+
+  background: #FF9500;
+  width: 17.4rem;
+  height: 5.2rem;
+  border-radius: .4rem;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes slideAndGrow {
+  0% {
+      transform: translateY(175%) scale(0);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0%) scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
